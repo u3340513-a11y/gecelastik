@@ -1,0 +1,55 @@
+# ============================================================
+# Gece Mobil Lastikçi 7/24 — .htaccess
+# Temiz URL'ler: .html uzantısı gizleme + yönlendirmeler
+# ============================================================
+
+Options -MultiViews
+Options -Indexes
+
+# mod_rewrite etkinleştir
+RewriteEngine On
+RewriteBase /
+
+# ---- 1. index.html → / yönlendirmesi (301 kalıcı) ----------
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html [NC]
+RewriteRule ^index\.html$ / [R=301,L]
+
+# ---- 2. .html uzantılı istek gelirse uzantısız URL'ye 301 --
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html [NC]
+RewriteRule ^([^.]+)\.html$ /$1 [R=301,L]
+
+# ---- 3. Uzantısız URL'yi arka planda .html dosyasına eşle --
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^.]+)$ $1.html [L]
+
+# ---- 4. Güvenlik başlıkları -----------------------------------
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-XSS-Protection "1; mode=block"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ---- 5. Gzip sıkıştırma (performans) -------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript
+</IfModule>
+
+# ---- 6. Tarayıcı önbelleği ------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css             "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/jpeg           "access plus 1 year"
+  ExpiresByType image/png            "access plus 1 year"
+  ExpiresByType image/webp           "access plus 1 year"
+  ExpiresByType image/svg+xml        "access plus 1 month"
+  ExpiresByType text/html            "access plus 0 seconds"
+</IfModule>
+
+# ---- 7. Canonical: www → www'suz yönlendirme ----------------
+# (cPanel'de varsa etkinleştirin, yoksa yorum satırında bırakın)
+# RewriteCond %{HTTP_HOST} ^www\.gecemobillastikci724\.com\.tr [NC]
+# RewriteRule ^(.*)$ https://gecemobillastikci724.com.tr/$1 [R=301,L]
