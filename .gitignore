@@ -25,3 +25,7 @@ npm-debug.log*
 
 # Node (ileride kullanılırsa)
 node_modules/
+
+# Orijinal WhatsApp görselleri (özel karakterli isimler - git uyumsuz)
+# Temiz isimli .jpg kopyaları repo'ya eklenir
+img/WhatsApp*
