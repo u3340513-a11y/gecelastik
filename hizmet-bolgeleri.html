@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hizmet Bölgeleri | Gece Mobil Lastikçi 7/24 — Gebze, Darıca, Tuzla ve Çevresi</title>
+  <meta name="description" content="Gebze, Darıca, Tuzla, Dilovası, Kurtköy, Kuzey Marmara Otoyolu dahil 14 bölgede 7/24 mobil lastik hizmeti. 0552 148 41 60">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gecemobillastikci724.com.tr/hizmet-bolgeleri.html">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%23f59e0b'/><circle cx='50' cy='50' r='20' fill='%230b1220'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Bölge detay kartları */
+    .area-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+    .area-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .area-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+    .area-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--border-gold);
+      box-shadow: var(--shadow);
+    }
+    .area-card:hover::before { opacity: 1; }
+    .area-card-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .area-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      background: rgba(251,191,36,0.1);
+      border: 1px solid rgba(251,191,36,0.15);
+      display: grid;
+      place-items: center;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+    .area-card h3 { font-size: 1.15rem; font-weight: 800; }
+    .area-card .area-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .area-card p { color: var(--text-soft); font-size: 0.93rem; line-height: 1.65; }
+    .area-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .area-tag {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.25rem 0.8rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-soft);
+    }
+    @media (min-width: 768px) {
+      .area-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .area-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Üst şerit -->
+  <div class="topbar">
+    <div class="container">
+      <span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <strong>7/24</strong> kesintisiz yol yardımı — Gece gündüz hizmetinizdeyiz
+      </span>
+      <a href="tel:+905521484160" aria-label="Telefon ile ara">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        0552 148 41 60
+      </a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container navbar">
+      <a href="index.html" class="brand" aria-label="Gece Mobil Lastikçi 7/24 ana sayfa">
+        <span class="brand-badge" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+        </span>
+        <span>Gece Mobil Lastikçi<small>7/24 Yol Yardım</small></span>
+      </a>
+      <nav aria-label="Ana menü">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Anasayfa</a></li>
+          <li><a href="hizmetler.html">Hizmetler</a></li>
+          <li><a href="hizmet-bolgeleri.html" class="active" aria-current="page">Hizmet Bölgeleri</a></li>
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </nav>
+      <a href="tel:+905521484160" class="nav-cta">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        0552 148 41 60
+      </a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navLinks">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sayfa başlığı -->
+    <section class="page-hero">
+      <div class="page-hero-bg" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1600&q=80" alt="" loading="eager">
+      </div>
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Konum">
+          <a href="index.html">Anasayfa</a> &rsaquo; Hizmet Bölgeleri
+        </nav>
+        <h1>Hizmet Bölgelerimiz</h1>
+        <p>Gebze merkezli 14 noktamızla Kocaeli ve İstanbul Anadolu Yakası'nın doğu kesiminde her yerde yanınızdayız.</p>
+      </div>
+    </section>
+
+    <!-- Bölge kartları -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Hizmet Ağı</span>
+          <h2>Nerede Olursanız Olun, Bölgenizdeyiz</h2>
+          <p>Ortalama 30 dakikalık varış süremiz tüm listelenen bölgeler için geçerlidir. Bölgeniz listede yoksa bizi arayın, yine de çözüm üretelim.</p>
+        </div>
+        <div class="area-grid">
+
+          <div class="area-card reveal delay-1">
+            <div class="area-card-header">
+              <div class="area-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg></div>
+              <div>
+                <div class="area-sub">Ana Merkez</div>
+                <h3>Gebze</h3>
+              </div>
+            </div>
+            <p>Gebze merkez ve tüm mahallelerinde 7/24 hizmet veriyoruz. Gebze, ekibimizin ana üs noktasıdır; en hızlı müdahaleyi burada gerçekleştiriyoruz.</p>
+            <div class="area-tags">
+              <span class="area-tag">Gebze Merkez</span>
+              <span class="area-tag">Şekerpınar</span>
+              <span class="area-tag">Güzeller</span>
+              <span class="area-tag">Pelitli</span>
+            </div>
+          </div>
+
+          <div class="area-card reveal delay-2">
+            <div class="area-card-header">
+              <div class="area-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg></div>
+              <div>
+                <div class="area-sub">Kocaeli</div>
+                <h3>Darıca</h3>
+              </div>
+            </div>
+            <p>Darıca ilçesi ve çevresinde tüm mahallelere yönelik kesintisiz mobil lastik hizmeti. Sahil yolu dahil tüm noktalara ulaşıyoruz.</p>
+            <div class="area-tags">
+              <span class="area-tag">Darıca Merkez</span>
+              <span class="area-tag">Bayramoğlu</span>
+              <span class="area-tag">Fatih Mah.</span>
+            </div>
+          </div>
+
+          <div class="area-card reveal delay-3">
+            <div class="area-card-header">
+              <div class="area-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg></div>
+              <div>
+                <div class="area-sub">İstanbul / Anadolu</div>
+                <h3>Tuzla</h3>
+              </div>
+            </div>
+            <p>Tuzla ilçesi, organize sanayi bölgesi ve çevresinde araç tipine bakılmaksızın lastik ve yol yardımı hizmeti.</p>
+            <div class="area-tags">
+              <span class="area-tag">Tuzla Merkez</span>
+              <span class="area-tag">Orhanlı</span>
+              <span class="area-tag">Tepeören</span>
+              <span class="area-tag">OSB</span>
+            </div>
+          </div>
+
+          <div class="area-card reveal delay-1">
+            <div class="area-card-header">
+              <div class="area-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg></div>
+              <div>
+                <div class="area-sub">İstanbul / Anadolu</div>
+                <h3>Kurtköy</h3>
+              </div>
+            </div>
+            <p>Kurtköy ve Pendik sınırına kadar uzanan bölgede, özellikle gece saatlerinde aktif hizmet veren ekibimiz her an hazır.</p>
+            <div class="area-tags">
+              <span class="area-tag">Kurtköy</span>
+              <span class="area-tag">Yenidoğan</span>
+              <span class="area-tag">TEM Kurtköy</span>
+            </div>
+          </div>
+
+          <div class="area-card reveal delay-2">
+            <div class="area-card-header">
+              <div class="area-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg></div>
+              <div>
+                <div class="area-sub">Kocaeli</div>
+                <h3>Dilovası</h3>
+              </div>
+            </div>
+            <p>Dilovası sanayi bölgesi ve çevresinde hem binek hem de ticari araçlara yönelik lastik hizmeti sunuyoruz.</p>
+            <div class="area-tags">
+              <span class="area-tag">Dilovası OSB</span>
+              <span class="area-tag">Mürüvvetler</span>
+            </div>
+          </div>
+
+          <div class="area-card reveal delay-3">
+            <div class="area-card-header">
+              <div class="area-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg></div>
+              <div>
+                <div class="area-sub">Kocaeli</div>
+                <h3>Hereke</h3>
+              </div>
+            </div>
+            <p>Hereke ilçesinde ve çevre köylerde, özellikle E-5 karayolu üzerindeki noktalarda hızlı müdahale sağlıyoruz.</p>
+            <div class="area-tags">
+              <span class="area-tag">Hereke</span>
+              <span class="area-tag">E-5 Güzergahı</span>
+            </div>
+          </div>
+
+          <div class="area-card reveal delay-1">
+            <div class="area-card-header">
+              <div class="area-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg></div>
+              <div>
+                <div class="area-sub">Kocaeli</div>
+                <h3>Derince</h3>
+              </div>
+            </div>
+            <p>Derince ilçesi ve liman çevresinde, gece vardiyasında dahi aktif hizmet veririz. Ticari araç müdahalesi konusunda deneyimliyiz.</p>
+            <div class="area-tags">
+              <span class="area-tag">Derince Merkez</span>
+              <span class="area-tag">Liman Bölgesi</span>
+            </div>
+          </div>
+
+          <div class="area-card reveal delay-2">
+            <div class="area-card-header">
+              <div class="area-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg></div>
+              <div>
+                <div class="area-sub">Kocaeli</div>
+                <h3>Eskihisar Sevindikli</h3>
+              </div>
+            </div>
+            <p>Osmangazi Köprüsü'ne bağlanan güzergahlarda ve Eskihisar vapur iskelesi çevresinde müdahale hizmeti veriyoruz.</p>
+            <div class="area-tags">
+              <span class="area-tag">Eskihisar</span>
+              <span class="area-tag">Sevindikli</span>
+              <span class="area-tag">Çayırova sınırı</span>
+            </div>
+          </div>
+
+          <div class="area-card reveal delay-3">
+            <div class="area-card-header">
+              <div class="area-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg></div>
+              <div>
+                <div class="area-sub">Otoyol</div>
+                <h3>Kuzey Marmara Otoyolu</h3>
+              </div>
+            </div>
+            <p>Kuzey Marmara Otoyolu'nun tamamında, emniyet şeridinde güvenli koşullar sağlanarak otoyol lastik değişimi ve tamiri yapıyoruz.</p>
+            <div class="area-tags">
+              <span class="area-tag">KM-O Tüm Güzergah</span>
+              <span class="area-tag">Acil Yardım</span>
+            </div>
+          </div>
+
+          <div class="area-card reveal delay-1">
+            <div class="area-card-header">
+              <div class="area-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg></div>
+              <div>
+                <div class="area-sub">Köprü</div>
+                <h3>Osmangazi Köprüsü (Oksiyen)</h3>
+              </div>
+            </div>
+            <p>Osmangazi Köprüsü üzeri ve Oksiyen bölgesinde acil lastik müdahalesi. Köprü güvenlik prosedürlerine uygun ekipman ve deneyimle hizmet veriyoruz.</p>
+            <div class="area-tags">
+              <span class="area-tag">Köprü Üzeri</span>
+              <span class="area-tag">Oksiyen</span>
+            </div>
+          </div>
+
+          <div class="area-card reveal delay-2">
+            <div class="area-card-header">
+              <div class="area-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg></div>
+              <div>
+                <div class="area-sub">İstanbul / Anadolu</div>
+                <h3>Orhanlı — Tepeören</h3>
+              </div>
+            </div>
+            <p>TEM Orhanlı kavşağı ve Tepeören bölgesinde, özellikle gece saatlerinde gelen çağrılara hızlı yanıt veriyoruz.</p>
+            <div class="area-tags">
+              <span class="area-tag">Orhanlı TEM</span>
+              <span class="area-tag">Tepeören</span>
+            </div>
+          </div>
+
+          <div class="area-card reveal delay-3">
+            <div class="area-card-header">
+              <div class="area-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg></div>
+              <div>
+                <div class="area-sub">Kocaeli</div>
+                <h3>Bayramoğlu</h3>
+              </div>
+            </div>
+            <p>Bayramoğlu tatil bölgesi ve sahil şeridinde araç sahiplerine yönelik hızlı mobil lastik hizmeti sunuyoruz.</p>
+            <div class="area-tags">
+              <span class="area-tag">Bayramoğlu</span>
+              <span class="area-tag">Sahil Yolu</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Bölge dışı bilgi -->
+    <section class="section section-alt">
+      <div class="container" style="max-width:760px;text-align:center">
+        <div class="reveal">
+          <span class="eyebrow">Bölge Dışı mı?</span>
+          <h2>Listemizde Yoksa da Arayın</h2>
+          <p style="color:var(--text-soft);margin:1.2rem 0 2rem;font-size:1.05rem;line-height:1.75">Yukarıda belirtilen bölgeler temel hizmet alanımızdır. Ancak komşu ilçe ve güzergahlar için de çoğu zaman çözüm üretebiliyoruz. Durumu bizimle paylaşın, en yakın ekibimizi yönlendirelim.</p>
+          <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+            <a href="tel:+905521484160" class="btn btn-primary">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Hemen Ara
+            </a>
+            <a href="https://wa.me/905521484160?text=Merhaba%2C%20lastik%20yard%C4%B1m%C4%B1na%20ihtiyac%C4%B1m%20var." class="btn btn-whatsapp" target="_blank" rel="noopener">WhatsApp ile Yaz</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:1.2rem;display:inline-flex">
+          <span class="brand-badge" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+          </span>
+          <span>Gece Mobil Lastikçi<small>7/24 Yol Yardım</small></span>
+        </a>
+        <p class="footer-about">Gebze merkezli mobil lastik servisi. 7/24 yerinde lastik değişimi, tamir ve yol yardımı hizmetleri.</p>
+        <a href="tel:+905521484160" class="footer-phone">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          0552 148 41 60
+        </a>
+      </div>
+      <div>
+        <h4>Hızlı Menü</h4>
+        <ul>
+          <li><a href="index.html">Anasayfa</a></li>
+          <li><a href="hizmetler.html">Hizmetler</a></li>
+          <li><a href="hizmet-bolgeleri.html">Hizmet Bölgeleri</a></li>
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hizmetler</h4>
+        <ul>
+          <li><a href="hizmetler.html">Lastik Değişimi</a></li>
+          <li><a href="hizmetler.html">Patlak Lastik Tamiri</a></li>
+          <li><a href="hizmetler.html">Stepne Takma</a></li>
+          <li><a href="hizmetler.html">Basınç &amp; Balans</a></li>
+          <li><a href="hizmetler.html">Akü Takviyesi</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Bölgeler</h4>
+        <ul>
+          <li><a href="hizmet-bolgeleri.html">Gebze</a></li>
+          <li><a href="hizmet-bolgeleri.html">Darıca</a></li>
+          <li><a href="hizmet-bolgeleri.html">Tuzla</a></li>
+          <li><a href="hizmet-bolgeleri.html">Dilovası</a></li>
+          <li><a href="hizmet-bolgeleri.html">Derince</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        &copy; <span id="year">2026</span> Gece Mobil Lastikçi 7/24 — gecemobillastikci724.com.tr | Tüm hakları saklıdır.
+      </div>
+    </div>
+  </footer>
+
+  <a href="tel:+905521484160" class="float-call" aria-label="Hemen ara: 0552 148 41 60">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  </a>
+  <a href="https://wa.me/905521484160?text=Merhaba%2C%20lastik%20yard%C4%B1m%C4%B1na%20ihtiyac%C4%B1m%20var." class="float-whatsapp" aria-label="WhatsApp ile yaz" target="_blank" rel="noopener">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.564 4.14 1.544 5.872L0 24l6.296-1.516A11.946 11.946 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.667-.498-5.214-1.37l-.374-.216-3.875.933.974-3.778-.234-.389A9.955 9.955 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  </a>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

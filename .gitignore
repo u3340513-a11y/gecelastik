@@ -1,0 +1,27 @@
+# macOS sistem dosyaları
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editör / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Log dosyaları
+*.log
+npm-debug.log*
+
+# Ortam değişkenleri
+.env
+.env.local
+.env.*.local
+
+# Node (ileride kullanılırsa)
+node_modules/
